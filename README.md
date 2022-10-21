@@ -9,7 +9,7 @@ Overall, CDE Resources simplify the management of files and dependencies associa
 
 This tutorial shows how to push a file from a CDE Resource to ADLS. Although CDE provides a fully managed Airflow instance with each Virtual Cluster, Airflow orchestration is optional. The pattern shown in this tutorial provides an example integration between CDE and 3rd party orchestration systems.
 
-![alt text](img/airflow_guide_11.png)
+![alt text](img/step_title.png)
 
 ## Requirements
 
@@ -138,7 +138,7 @@ Open the "cde_job.py" and "utils.py" scripts and inspect them. In summary:
 
 CDE is the Cloudera Data Engineering Service, a containerized managed service for Spark and Airflow. With Resources, CDE users can more easily track and reuse dependencies including simple python scripts, jars, as well as Python environments and more.
 
-In this tutorial we uploaded a file from a CDE Resource to an ADLS folder. This pattern can be as an integration point between CDE Jobs/Resources and 3rd party orchestration systems. 
+In this tutorial we uploaded a file from a CDE Resource to an ADLS folder. This pattern can be as an integration point between CDE Jobs/Resources and 3rd party orchestration systems.
 
 If you are exploring CDE you may find the following tutorials relevant:
 
