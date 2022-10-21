@@ -16,9 +16,9 @@ This tutorial shows how to push a file from a CDE Resource to ADLS. Although CDE
 The following requirements are needed to run through the tutorial:
 
 * CDP Public Cloud: A CDE Virtual Cluster associated with an Azure CDP Instance.
-* Virtual Clusters of Spark 2 or Spark 3 version are ok.
-* Azure: The Storage Account Name and the Storage Account Key associated with the ADLS target destination for the file transfer
-* Basic familiarity with Python (no code changes are required)
+* Spark 2 or Spark 3 CDE Virtual Clusters  ok.
+* Azure: The Storage Account Name and the Storage Account Key associated with the ADLS target destination for the file transfer.
+* Basic familiarity with Python (no code changes required).
 
 ## Instructions
 
@@ -63,9 +63,9 @@ Next, upload the "cde_job.py", "my_file1.py" and "utils.py" files via the "Uploa
 
 #### Step 2: Create a CDE Resource of Type Python Environment
 
-In this step you will create a Python Environment so you can pip install the "azure-storage-file-datalake" Library and use it with your CDE Job.
+In this step you will create a Python Environment so you can pip install the "azure-storage-file-datalake" library and use it with your CDE Job.
 
-Navigate back to the CDE Resources tab and create a CDE Resource of type "Python Environment". Select Python 3 and leave the PiPy mirror field blank.
+Navigate back to the CDE Resources tab and create a CDE Resource of type "Python Environment". Select Python 3 and leave the PyPi mirror field blank.
 
 ![alt text](img/step5.png)
 
@@ -83,11 +83,9 @@ In this step you will create the CDE Job with the uploaded scripts and Python en
 
 Navigate to the Jobs tab on the left pane. Select the "Create Job" blue icon on the right side.
 
-![alt text](img/step6.png)
-
-Next, select the Spark Job Type from the Toggle Bar. The tutorial is compatible with both Spark 2 or Spark 3 clusters.
-
 ![alt text](img/step7.png)
+
+Next, select the Spark Job Type from the Toggle Bar (Spark 2.4 or 3.2 ok).
 
 Under "Application Files" select "File" and then "Select from Resource". Select file "cde_job.py". This will be the base script for the CDE Job.
 
