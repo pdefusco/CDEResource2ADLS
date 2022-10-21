@@ -101,13 +101,44 @@ Immediately below, choose Python 3 and select the Python Environment you created
 
 ![alt text](img/step11.png)
 
-Finally, expand the "Advanced Options" section. No changes are required but notice the CDE Resource of type file has been associated with the CDE Job for you automatically. This will allow you to reference modules in the "utils.py" script from the "cde_job.py" script.
+Expand the "Advanced Options" section. No changes are required but notice the CDE Resource of type file has been associated with the CDE Job for you automatically. This will allow you to reference modules in the "utils.py" script from the "cde_job.py" script.
 
 ![alt text](img/step12.png)
+
+Finally, click on the "Create and Run" blue icon at the bottom of the page.
+
+![alt text](img/step13.png)
+
+
+#### Step 4: Validate the "my_file1.py" Upload to ADLS
+
+The CDE Job is now executing. This will move the "my_file1.py" file from the /app/mount folder to the ADLS destination you specified in the "cde_job.py" script.
+
+Navigate to the CDE Job Runs page and open the latest job run by clicking on its number.
+
+![alt text](img/step14.png)
+
+Open the "Logs" tab and then the "stdout" tab.
+
+![alt text](img/step15.png)
+
+At the bottom, validate that the file has been uploaded to the ADLS folder.
+
+![alt text](img/step16.png)
+
+Open the "cde_job.py" and "utils.py" scripts and inspect them. In summary:
+
+* When the CDE Job is executed a Kubernetes pod running the CDE Docker Container is launched by the CDE Service. This process is fully automatic and requires no Kubernetes knowledge on the user.
+* The CDE Job mounts dependencies stored in CDE Resources of type File from the /app/mount folder. Thus, all files in the CDE Resource can now be consumed by the Python script. The /app/mount folder is referenced at line 47 in "utils.py"
+* The CDE Job container imports all modules from the selected Python Environment and "utils.py" file (lines 50, 51, 52, 55). The utils module methods are used between lines 99 - 127.
+* The helper methods ensure the ADLS destination folder is ready for the file transfer and then upload the raaw file.
+* Lines 59 - 81 show some sample Spark code. Notice this is independent of the file transfer and has only been added for demo purposes.
 
 ## Conclusions & Next Steps
 
 CDE is the Cloudera Data Engineering Service, a containerized managed service for Spark and Airflow. With Resources, CDE users can more easily track and reuse dependencies including simple python scripts, jars, as well as Python environments and more.
+
+In this tutorial we uploaded a file from a CDE Resource to an ADLS folder. This pattern can be as an integration point between CDE Jobs/Resources and 3rd party orchestration systems. 
 
 If you are exploring CDE you may find the following tutorials relevant:
 
