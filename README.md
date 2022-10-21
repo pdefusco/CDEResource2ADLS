@@ -45,7 +45,7 @@ Please reach out to your Azure admin if you are unsure what these are.
 
 #### Step 1: Create a CDE Resource of Type Files
 
-In this step you will upload our Python scripts to a CDE Resource of type "File" so we can more easily create a CDE Job with its dependencies.
+In this step you will upload the provided Python scripts to a CDE Resource of type "File" so you can more easily create a CDE Job with its dependencies.
 
 Navigate to your CDE Virtual Cluster and Open the Jobs page.
 
@@ -146,7 +146,7 @@ If you are exploring CDE you may find the following tutorials relevant:
 
 * [CDE CLI Demo](https://github.com/pdefusco/CDE_CLI_demo): A more advanced CDE CLI reference with additional details for the CDE user who wants to move beyond the basics.
 
-* [Using CDE Airflow](https://github.com/pdefusco/Using_CDE_Airflow): A guide to Airflow in CDE including examples to integrate with 3rd party systems via Airflow Operators such as BashOperator, HttpOperator, PythonOperator, and more. 
+* [Using CDE Airflow](https://github.com/pdefusco/Using_CDE_Airflow): A guide to Airflow in CDE including examples to integrate with 3rd party systems via Airflow Operators such as BashOperator, HttpOperator, PythonOperator, and more.
 
 * [GitLab2CDE](https://github.com/pdefusco/Gitlab2CDE): a CI/CD pipeline to orchestrate Cross-Cluster Workflows for Hybrid/Multicloud Data Engineering.
 
