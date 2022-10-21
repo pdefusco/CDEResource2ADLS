@@ -86,8 +86,8 @@ for each in another_df.collect():
 #----------------------------------------------------------------
 
 ## YOUR ADLS INFO HERE
-os.environ["account_name"] = "demoazurego02"
-os.environ["storage_account_key"] = "<YOUR-STORAGE-ACCOUNT-KEY>"
+os.environ["account_name"] = "<YOUR-AZURE-ACCOUNT-NAME>"
+os.environ["storage_account_key"] = "<YOUR-AZURE-STORAGE-ACCOUNT-KEY>"
 
 #-----------------------------------------------------------------
 #               UPLOADING FILE TO ADLS
