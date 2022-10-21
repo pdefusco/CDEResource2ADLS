@@ -1,4 +1,4 @@
-# Transfering Files from CDE Resources to ADLS
+# Transferring Files from CDE Resources to ADLS
 
 ## Objective
 
