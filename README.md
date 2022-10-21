@@ -43,7 +43,7 @@ Alternatively, if you don't have GitHub create a folder on your local computer; 
 Open "cde_job.py" in any editor of your choice. Add your Azure Storage Account Name and Key in the fields at lines 89 and 90.
 Please reach out to your Azure admin if you are unsure what these are.
 
-#### Step 1: Create a CDE Resources of Type Files
+#### Step 1: Create a CDE Resource of Type Files
 
 In this step you will upload our Python scripts to a CDE Resource of type "File" so we can more easily create a CDE Job with its dependencies.
 
@@ -61,7 +61,7 @@ Next, upload the "cde_job.py", "my_file1.py" and "utils.py" files via the "Uploa
 
 ![alt text](img/step4.png)
 
-#### Step 2: Create a CDE Resources of Type Python Environment
+#### Step 2: Create a CDE Resource of Type Python Environment
 
 In this step you will create a Python Environment so you can pip install the "azure-storage-file-datalake" Library and use it with your CDE Job.
 
