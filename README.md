@@ -85,7 +85,7 @@ Navigate to the Jobs tab on the left pane. Select the "Create Job" blue icon on 
 
 ![alt text](img/step7.png)
 
-Next, select the Spark Job Type from the Toggle Bar (Spark 2.4 or 3.2 ok).
+Next, select the Spark Job Type from the Toggle Bar (Spark 2.4 or 3.2 ok). If you are curious to learn more about Airflow jobs, please visit [this related tutorial](https://github.com/pdefusco/Using_CDE_Airflow).
 
 Under "Application Files" select "File" and then "Select from Resource". Select file "cde_job.py". This will be the base script for the CDE Job.
 
@@ -142,9 +142,11 @@ If you are exploring CDE you may find the following tutorials relevant:
 
 * [Spark 3 & Iceberg](https://github.com/pdefusco/Spark3_Iceberg_CML): A quick intro of Time Travel Capabilities with Spark 3.
 
-* [Simple Intro to the CDE CLI](https://github.com/pdefusco/CDE_CLI_Simple): A simple introduction to the CDE CLI for the CDE beginner.
+* [Simple Intro to the CDE CLI](https://github.com/pdefusco/CDE_CLI_Simple): An introduction to the CDE CLI for the CDE beginner.
 
 * [CDE CLI Demo](https://github.com/pdefusco/CDE_CLI_demo): A more advanced CDE CLI reference with additional details for the CDE user who wants to move beyond the basics.
+
+* [Using CDE Airflow](https://github.com/pdefusco/Using_CDE_Airflow): A guide to Airflow in CDE including examples to integrate with 3rd party systems via Airflow Operators such as BashOperator, HttpOperator, PythonOperator, and more. 
 
 * [GitLab2CDE](https://github.com/pdefusco/Gitlab2CDE): a CI/CD pipeline to orchestrate Cross-Cluster Workflows for Hybrid/Multicloud Data Engineering.
 
