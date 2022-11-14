@@ -43,8 +43,8 @@ def upload_file_to_directory():
 
         directory_client = file_system_client.get_directory_client("my-directory")
 
-        file_client = directory_client.create_file("my_file1.py")
-        local_file = open("/app/mount/my_file1.py",'r')
+        file_client = directory_client.create_file("myfile_1.py")
+        local_file = open("/app/mount/myfile_1.py",'r')
 
         file_contents = local_file.read()
 
