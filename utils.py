@@ -18,33 +18,33 @@ def initialize_storage_account(storage_account_name, storage_account_key):
     except Exception as e:
         print(e)
 
-def create_file_system():
+def create_file_system(file_system_name):
     try:
         global file_system_client
 
-        file_system_client = service_client.create_file_system(file_system="my-file-system")
+        file_system_client = service_client.create_file_system(file_system=file_system_name)
 
     except Exception as e:
         print(e)
 
 
-def create_directory():
+def create_directory(directory_name):
     try:
-        file_system_client.create_directory("my-directory")
+        file_system_client.create_directory(directory_name)
 
     except Exception as e:
      print(e)
 
 
-def upload_file_to_directory():
+def upload_file_to_directory(file_system_name, directory_name, cde_file):
     try:
 
-        file_system_client = service_client.get_file_system_client(file_system="my-file-system")
+        file_system_client = service_client.get_file_system_client(file_system=file_system_name)
 
-        directory_client = file_system_client.get_directory_client("my-directory")
+        directory_client = file_system_client.get_directory_client(directory_name)
 
-        file_client = directory_client.create_file("myfile_1.py")
-        local_file = open("/app/mount/myfile_1.py",'r')
+        file_client = directory_client.create_file(cde_file)
+        local_file = open("/app/mount/"+cde_file,'r')
 
         file_contents = local_file.read()
 
@@ -55,10 +55,10 @@ def upload_file_to_directory():
     except Exception as e:
       print(e)
 
-def list_directory_contents():
+def list_directory_contents(file_system_name):
     try:
 
-        file_system_client = service_client.get_file_system_client(file_system="my-file-system")
+        file_system_client = service_client.get_file_system_client(file_system=file_system_name)
 
         paths = file_system_client.get_paths(path="my-directory")
 

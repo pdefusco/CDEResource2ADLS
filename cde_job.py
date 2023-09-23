@@ -103,19 +103,19 @@ except:
     print("Error During Connection Initialization")
 
 try:
-    utils.create_file_system()
+    utils.create_file_system("my_azure_fs")
     print("File System Creation Successful")
 except:
     print("File System Cretion Failed")
 
 try:
-    utils.create_directory()
+    utils.create_directory("my_azure_dir")
     print("ADLS Directory Creation Successful")
 except:
     print("ADLS Directory Creation Failed")
 
 try:
-    utils.upload_file_to_directory()
+    utils.upload_file_to_directory("my_azure_fs", "my_azure_dir", "myfile_1.py")
     print("File Upload Successful")
 except:
     print("File Upload Failed")
